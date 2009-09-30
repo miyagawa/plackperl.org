@@ -26,7 +26,7 @@ ul.inline li.first {
 .tagline { color: #888; font-style: italic; margin-bottom: 1em }
 
 div,p,dt,dd,li { font-size: 1.1em }
-p { padding-bottom: 0.8em }
+p.para { padding-bottom: 0.8em }
 p + p { text-indent: 0; !important }
 h1,h2,h3 { margin-bottom: 0.4em }
 /* body { background: #444 }
@@ -44,11 +44,11 @@ $( function() {
 
 <h1>PSGI/Plack</h1>
 
-<p>PSGI is a <strong>specification</strong> of interface protocol between Perl web applications and web servers, inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
+<p class="para">PSGI is a <strong>specification</strong> of interface protocol between Perl web applications and web servers, inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
 
-<p>Plack is a Perl module and namespace to contain set of reference PSGI server <strong>implementations</strong>, middleware and ulitity modules to help build middleware, frameworks and servers. Plack is to PSGI what <a href="http://pylonshq.com/">Pylons</a> is to WSGI and well, Rack is to Rack.</p>
+<p class="para">Plack is a Perl module and namespace to contain set of reference PSGI server <strong>implementations</strong>, middleware and ulitity modules to help build middleware, frameworks and servers. Plack is to PSGI what <a href="http://pylonshq.com/">Pylons</a> is to WSGI and well, Rack is to Rack.</p>
 
-<p><a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/FAQ.pod">Frequently Asked Questions</a> are available.</p>
+<p class="para"><a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/FAQ.pod">Frequently Asked Questions</a> are available.</p>
 
 <h2>Repositories</h2>
 <ul>
@@ -110,9 +110,9 @@ $( function() {
 
 <p>Note that some slide materials might be outdated.</p>
 
-<ul>
-<li><a href="http://tokuhirom.github.com/talks/20090910-yapcasia2009-psgi-plack/">Tokuhiro Matsuno at YAPC::Asia 2009</a></li>
-</ul>
+<dl>
+<dt><a href="http://tokuhirom.github.com/talks/20090910-yapcasia2009-psgi-plack/">Tokuhiro Matsuno at YAPC::Asia 2009</a> (Japanese)</dt>
+</dl>
 
 <h2>Community</h2>
 
