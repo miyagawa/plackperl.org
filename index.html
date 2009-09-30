@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>PSGI/Plack - Perl WSGI</title>
-<link rel="stylesheet" href="http://miyagawa.github.com/screen.css"/>
+<link rel="stylesheet" href="http://plackperl.org/screen.css"/>
 <style>
 ul { list-style: none }
 dd { margin-bottom: 0.8em }
@@ -46,7 +46,7 @@ $( function() {
 
 <p>PSGI is a <strong>specification</strong> of interface protocol between Perl web applications and web servers, inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
 
-<p>Plack is a Perl module and namespace to contain set of reference PSGI server <strong>implementations</strong>, middleware and ulitity modules to help build middleware, frameworks and servers. Plack is to PSGI what <a href="http://pylonshq.com/">Pylons</a> is to WSGI.</p>
+<p>Plack is a Perl module and namespace to contain set of reference PSGI server <strong>implementations</strong>, middleware and ulitity modules to help build middleware, frameworks and servers. Plack is to PSGI what <a href="http://pylonshq.com/">Pylons</a> is to WSGI and well, Rack is to Rack.</p>
 
 <p><a href="psgi-spec.html">PSGI specification</a> and <a href="psgi-faq.html">Frequently Asked Questions</a> are available.</p>
 
@@ -61,22 +61,62 @@ $( function() {
 <dt><a href="http://github.com/miyagawa/Plack">Plack</a></dt>
 <dd>Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
 
-<dt><a href="#">Perlbal</a></dt>
-<dd><a href="#">Perlbal::Plugin::PSGI</a> allows you to run PSGI application on Perlbal. Note that it's a non-blocking single process and your application is not supposed to block.</dd>
+<dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
+<dd><a href="http://github.com/miyagawa/Plack">Perlbal::Plugin::PSGI</a> allows you to run PSGI application on Perlbal. Note that it's a non-blocking single process and your application is not supposed to block.</dd>
 
 <dt><a href="http://www.nginx.eu/">nginx</a></dt>
 <dd><a href="http://github.com/yappo/nginx-psgi-patchs">Yappo's nginx patches</a> run PSGI application on nginx embedded perl interpreter. Considered highly experimental.</dd>
 
+<dt><a href="http://github.com/tokuhirom/p5-http-server-fast/">HTTP::Server::Fast</a></dt>
+<dd>Full XS based HTTP daemon to run PSGI application.</dd>
+
 </dl>
 
 <h2>Frameworks</h2>
+
+<dl>
+<dt><a href="http://www.catalystframework.org/">Catalyst</a></dt>
+<dd>Catalyst is one of the most popular web application frmaeworks in Perl and has a support for PSGI through <a href="http://github.com/miyagawa/Catalyst-Engine-PSGI">Catalyst::Engine::PSGI</a>.</dd>
+<dt><a href="http://cgi-app.org/">CGI::Application</a></dt>
+<dd>Any CGI::Application can run as a PSGI application using <a href="http://github.com/miyagawa/CGI-PSGI">CGI::PSGI</a> and <a href="http://github.com/miyagawa/CGI-Application-PSGI">CGI::Application::PSGI</a>.</dd>
+<dt><a href="http://search.cpan.org/dist/HTTP-Engine">HTTP::Engine</a></dt>
+<dd>HTTP::Engine is a micro web application framework and has <a href="http://github.com/http-engine/HTTP-Engine">PSGI Interface support</a>.</dd>
+<dt><a href="http://search.cpan.org/~sukria/Dancer/">Dancer</a></dt>
+<dd>Dancer is a Sinatra-like micro web application framework and supports PSGI since 0.9904.</dd>
+<dt><a href="http://search.cpan.org/~beppu/Squatting/">Squatting</a></dt>
+<dd>Squatting is a Camping-inspired Web Microframework and has support for PSGI through <a href="http://github.com/miyagawa/Squatting-On-PSGI">Squatting::On::PSGI</a></dd>
+<dt><a href="http://github.com/awwaiid/continuity">Continuity</a></dt>
+<dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
+<dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
+<dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
+<dt><a href="http://github.com/yusukebe/Noe">Noe</a></dt>
+<dt><a href="http://github.com/nekokak/p5-Kamui">Kamui</a></dt>
+
+</dt>
+
 <h2>Middleware and Utilities</h2>
+
+<dl>
+<dt><a href="http://search.cpan.org/~nuffin/IO-Handle-Util/">IO::Handle::Util</a></dt>
+<dd>Utility to create IO::Handle-like object instantly with a simple interface.</dd>
+<dt><a href="http://search.cpan.org/~kazuho/HTTP-Parser-XS-0.02/">HTTP::Parser::XS</a></dt>
+<dd>Super fast XS based PSGI compatible HTTP header parser, used in many Plack server implementations.</dd>
+<dt><a href="http://github.com/miyagawa/Plack">CGI::Emulate::PSGI</a></dt>
+<dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI)</dd>
+
+</dl>
 
 <h2>Slides</h2>
 
+<p>Note that some slide materials might be outdated.</p>
+
+<ul>
+<li><a href="http://tokuhirom.github.com/talks/20090910-yapcasia2009-psgi-plack/">Tokuhiro Matsuno at YAPC::Asia 2009</a></li>
+</ul>
+
 <h2>Community</h2>
 
-<p>Tatsuhiko Miyagawa's <a href="http://bulknews.typepad.com/">blog</a> and <a href="http://delicious.com/miyagawa/psgi">delicious boomarks</a> have a lot of updated information and links to PSGI/Plack related entries. We're chatting on <a href="irc://irc.perl.org/#http-engine">#http-engine on irc.perl.org</a> and have a low-traffic <a href="http://groups.google.com/group/psgi-plack">mailing list</a>.
+<p>Tatsuhiko Miyagawa's <a href="http://bulknews.typepad.com/">blog</a> and <a href="http://delicious.com/miyagawa/psgi">delicious bookmarks</a> have a lot of updated information and links to PSGI/Plack related entries. We're chatting on <a href="irc://irc.perl.org/#http-engine">#http-engine on irc.perl.org</a> and have a low-traffic <a href="http://groups.google.com/group/psgi-plack">mailing list</a>.
 
 <div id="footer">
 PSGI spec and Plack are written by <a href="http://bulknews.typepad.com/">Tatsuhiko Miyagawa</a> and many contributors.<br/>Source code for this site is available on <a href="http://github.com/miyagawa/plackcode.org">github</a>.
