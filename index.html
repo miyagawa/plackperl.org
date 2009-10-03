@@ -23,10 +23,10 @@ $( function() {
 
 <h1>PSGI/Plack</h1>
 
-<p>PSGI is a <strong>specification</strong> of interface between Perl web applications and web servers, inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
-<p>Plack is a Perl module and namespace to contain set of reference PSGI server <strong>implementations</strong>, middleware and ulitity modules to help build middleware, frameworks and servers. Plack is to PSGI what <a href="http://pylonshq.com/">Pylons</a> is to WSGI and well, Rack is to Rack.</p>
+<p>PSGI is a <strong>specification</strong> of an interface between Perl web applications and web servers. PSGI is inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
+<p>Plack is a Perl module and namespace that contains a set of reference PSGI server <strong>implementations</strong>, middleware and utility modules to help build middleware, frameworks and servers. Plack is to PSGI as <a href="http://pylonshq.com/">Pylons</a> is to WSGI and, well, Rack is to Rack.</p>
 
-<p class="inline"><a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/FAQ.pod">Frequently Asked Questions</a> are available.</p>
+<p class="inline">The <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/FAQ.pod">Frequently Asked Questions</a> are available.</p>
 
 <h2>Repositories</h2>
 <ul>
@@ -37,19 +37,19 @@ $( function() {
 <h2>Servers</h2>
 <dl>
 <dt><a href="http://github.com/miyagawa/Plack">Plack</a></dt>
-<dd>Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
+<dd>The Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
 
 <dt><a href="http://github.com/spiritloose/mod_psgi/">mod_psgi</a></dt>
-<dd>mod_psgi is Apache2 module by Jiro Nishiguchi that runs PSGI application using embedded Perl interpreter.</dd>
+<dd>mod_psgi is an Apache2 module by Jiro Nishiguchi that runs PSGI applications using an embedded Perl interpreter.</dd>
 
 <dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
-<dd><a href="http://github.com/miyagawa/Plack">Perlbal::Plugin::PSGI</a> allows you to run PSGI application on Perlbal. Note that it's a non-blocking single process and your application is not supposed to block.</dd>
+<dd><a href="http://github.com/miyagawa/Plack">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because it is non-blocking and single process, your application is not supposed to block.</dd>
 
 <dt><a href="http://www.nginx.eu/">nginx</a></dt>
-<dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> run PSGI application on nginx embedded perl interpreter. Considered highly experimental.</dd>
+<dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> run PSGI applications on a Perl interpreter embedded into nginx. This is considered highly experimental.</dd>
 
 <dt><a href="http://github.com/tokuhirom/p5-http-server-fast/">HTTP::Server::Fast</a></dt>
-<dd>Full XS based HTTP daemon to run PSGI application by Tokuhiro Matsuno.</dd>
+<dd>HTTP::Server::Fast is a complete XS-based HTTP daemon to run PSGI applications, written by Tokuhiro Matsuno.</dd>
 
 </dl>
 
@@ -63,15 +63,15 @@ $( function() {
 <dt><a href="http://search.cpan.org/dist/HTTP-Engine">HTTP::Engine</a></dt>
 <dd>HTTP::Engine is a micro web application framework and has <a href="http://github.com/http-engine/HTTP-Engine">PSGI Interface support</a>.</dd>
 <dt><a href="http://dancer.sukria.net">Dancer</a></dt>
-<dd>Dancer is a Sinatra-like micro web application framework and supports PSGI since 0.9904.</dd>
+<dd>Dancer is a Sinatra-like micro web application framework and has supported PSGI since version 0.9904.</dd>
 <dt><a href="http://www.masonhq.com/">Mason</a></dt>
 <dd>Mason allows you to embed code in HTML templates and can now run on any PSGI supported web server using <a href="http://github.com/miyagawa/HTML-Mason-PSGIHandler">HTML::Mason::PSGIHandler</a></dd>
 <dt><a href="http://search.cpan.org/~beppu/Squatting/">Squatting</a></dt>
 <dd>Squatting is a Camping-inspired Web Microframework and has support for PSGI through <a href="http://github.com/miyagawa/Squatting-On-PSGI">Squatting::On::PSGI</a></dd>
 <dt><a href="http://search.cpan.org/~awwaiid/Continuity/">Continuity</a></dt>
-<dd>Continuity is a Coro based web server that supports Continuation. <a href="http://search.cpan.org/~awwaiid/Continuity-1.01/">Github repo</a> has an experimental Plack support.</dd>
+<dd>Continuity is a Coro based web server that supports Continuations. The <a href="http://search.cpan.org/~awwaiid/Continuity-1.01/">Github repo</a> has an experimental Plack support.</dd>
 <dt><a href="http://maypole.perl.org/">Maypole</a></dt>
-<dd>Maypole application can run as a PSGI application using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
+<dd>Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
 <dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
@@ -84,13 +84,13 @@ $( function() {
 
 <dl>
 <dt><a href="http://github.com/miyagawa/CGI-PSGI">CGI::PSGI</a></dt>
-<dd>CGI.pm subclass to handle PSGI env hash to provide CGI.pm compatible interface. Very useful to migrate CGI.pm based web application frameworks to PSGI interface.</dd>
+<dd>CGI.pm subclass to handle PSGI env hash to provide a CGI.pm-compatible interface. Very useful to migrate CGI.pm-based web application frameworks to the PSGI interface.</dd>
 <dt><a href="http://search.cpan.org/~nuffin/IO-Handle-Util/">IO::Handle::Util</a></dt>
-<dd>Utility to create IO::Handle-like object instantly with a simple interface.</dd>
+<dd>Utility module to create an IO::Handle-like object instantly with a simple interface.</dd>
 <dt><a href="http://search.cpan.org/~kazuho/HTTP-Parser-XS-0.02/">HTTP::Parser::XS</a></dt>
-<dd>Super fast XS based PSGI compatible HTTP header parser, used in many Plack server implementations.</dd>
+<dd>Super fast XS-based PSGI compatible HTTP header parser, used in many Plack server implementations.</dd>
 <dt><a href="http://github.com/miyagawa/Plack">CGI::Emulate::PSGI</a></dt>
-<dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI)</dd>
+<dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating a CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI)</dd>
 
 </dl>
 
@@ -107,7 +107,7 @@ $( function() {
 <p>Tatsuhiko Miyagawa's <a href="http://bulknews.typepad.com/">blog</a> and <a href="http://delicious.com/miyagawa/psgi">delicious bookmarks</a> have a lot of updated information and links to PSGI/Plack related entries. We're chatting on <a href="irc://irc.perl.org/#http-engine">#http-engine on irc.perl.org</a> and have a low-traffic <a href="http://groups.google.com/group/psgi-plack">mailing list</a>.
 
 <div id="footer">
-PSGI spec and Plack are written by <a href="http://bulknews.typepad.com/">Tatsuhiko Miyagawa</a> and many contributors.<br/>Source code for this site is available on <a href="http://github.com/miyagawa/plackcode.org">github</a>.
+The PSGI spec and Plack are written by <a href="http://bulknews.typepad.com/">Tatsuhiko Miyagawa</a> and many contributors.<br/>Source code for this site is available on <a href="http://github.com/miyagawa/plackcode.org">github</a>.
 </div>
 
 </div>
