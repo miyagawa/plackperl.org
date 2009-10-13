@@ -11,6 +11,10 @@ var pageTracker = _gat._getTracker("UA-52226-5");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 <link rel="stylesheet" href="http://plackperl.org/screen.css"/>
+<style>
+p.quote  { padding-bottom: 0 }
+p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1em }
+</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>
 
@@ -28,13 +32,25 @@ $( function() {
 
 <p class="inline">The <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI/FAQ.pod">Frequently Asked Questions</a> are available.</p>
 
-<h2>Repositories</h2>
+<h2 id="testimonials">What People Say</h2>
+
+<p class="quote">&quot;I love this... I think it's exactly the right answer to what I was looking for, for a really simple webapp framework.&quot;</p><p class="quoted">-Benjamin Trott, CTO and Co-founder of Six Apart</p>
+
+<p class="quote">&quot;Wow, this is nothing short of awesome. A big ++ to the entire PSGI/Plack team!&quot</p><p class="quoted">-Stevan Little, Infinity Interactive</p>
+
+<p class="quote">&quot;My friend miyagawa has been championing PSGI and its reference implementation, Plack. This is something we've needed for a long time: a clean and simple way to respond to HTTP requests without the cruft of CGI&quot;</p><p class="quoted">-Yuval Kogman, KiokuDB and Moose</p>
+
+<p class="quote">&quot;PSGI (is) an absurdly simple, manifestly beautiful specification for an interface between Perl web apps and web servers.&quot; </p><p class="quoted">-Patrick Donelan, WebGUI developer</p>
+
+<p class="quote">&quot;miyagawa++ # fucking awesome&quot;</p><p class="quoted">-Matt S Trout, Shadowcat Systems</p>
+
+<h2 id="repositories">Repositories</h2>
 <ul>
 <li><a href="http://github.com/miyagawa/psgi-specs">PSGI specifications</a></li>
 <li><a href="http://github.com/miyagawa/Plack">Plack core</a></li>
 </ul>
 
-<h2>Servers</h2>
+<h2 id="servers">Servers</h2>
 <dl>
 <dt><a href="http://search.cpan.org/dist/Plack">Plack</a></dt>
 <dd>The Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
@@ -59,7 +75,7 @@ $( function() {
 
 </dl>
 
-<h2>Frameworks</h2>
+<h2 id="frameworks">Frameworks</h2>
 
 <dl>
 <dt><a href="http://www.catalystframework.org/">Catalyst</a></dt>
@@ -86,14 +102,14 @@ $( function() {
 
 </dt>
 
-<h2>Applications</h2>
+<h2 id="applications">Applications</h2>
 
 <dl>
 <dt><a href="http://www.webgui.org/">WebGUI</a></dt>
 <dd><a href="http://blog.patspam.com/">Patrick Donelan</a> is working on <a href="http://blog.patspam.com/2009/plebgui-webgui-meets-plack">Plack support for WebGUI</a> on <a href="http://github.com/pdonelan/webgui">his github repo</a>.</dd>
 </dl>
 
-<h2>Middleware and Utilities</h2>
+<h2 id="middlewares">Middleware and Utilities</h2>
 
 <dl>
 <dt><a href="http://search.cpan.org/dist/CGI-PSGI">CGI::PSGI</a></dt>
@@ -109,7 +125,7 @@ $( function() {
 
 </dl>
 
-<h2>Slides and Blog Posts</h2>
+<h2 id="slides">Slides and Blog Posts</h2>
 
 <p class="inline">Note that some materials and technical details might be outdated.</p>
 
@@ -122,7 +138,7 @@ $( function() {
 <dd>Tokuhiro Matsuno at YAPC::Asia 2009 (Japanese)</dd>
 </dl>
 
-<h2>Community</h2>
+<h2 id="community">Community</h2>
 
 <p>Tatsuhiko Miyagawa's <a href="http://bulknews.typepad.com/">blog</a> and <a href="http://delicious.com/miyagawa/psgi">delicious bookmarks</a> have a lot of updated information and links to PSGI/Plack related entries. We're chatting on <a href="irc://irc.perl.org/#http-engine">#http-engine on irc.perl.org</a> and have a low-traffic <a href="http://groups.google.com/group/psgi-plack">mailing list</a>.
 
