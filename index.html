@@ -26,7 +26,7 @@ $( function() {
 <p>PSGI is a <strong>specification</strong> of an interface between Perl web applications and web servers. PSGI is inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
 <p>Plack is a Perl module and namespace that contains a set of reference PSGI server <strong>implementations</strong>, middleware and utility modules.
 
-<p class="inline">The <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/FAQ.pod">Frequently Asked Questions</a> are available.</p>
+<p class="inline">The <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI.pod">PSGI specification</a> and <a href="http://github.com/miyagawa/psgi-specs/blob/master/PSGI/FAQ.pod">Frequently Asked Questions</a> are available.</p>
 
 <h2>Repositories</h2>
 <ul>
@@ -39,11 +39,17 @@ $( function() {
 <dt><a href="http://github.com/miyagawa/Plack">Plack</a></dt>
 <dd>The Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
 
+<dt>Misc Plack::Server backends</dt>
+<dd>Non-core server backends like <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a> and <a href="http://github.com/miyagawa/Plack-Server-ServerSimple">ServerSimple</a> are available as separate distributions.</dd>
+
+<dt><a href="http://search.cpan.org/dist/Plack-Server-ReverseHTTP">ReverseHTTP</a></dt>
+<dd>ReverseHTTP server allows you to run a PSGI application on your desktop or inside the firewall but allows external access via <a href="http://www.reversehttp.net/">reversehttp.net</a> gateway.</dd>
+
 <dt><a href="http://github.com/spiritloose/mod_psgi/">mod_psgi</a></dt>
 <dd>mod_psgi is an Apache2 module by Jiro Nishiguchi that runs PSGI applications using an embedded Perl interpreter.</dd>
 
 <dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
-<dd><a href="http://github.com/miyagawa/Plack">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because it is non-blocking and single process, your application is not supposed to block.</dd>
+<dd><a href="http://github.com/miyagawa/Perlbal-Plugin-PSGI">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because it is non-blocking and single process, your application is not supposed to block.</dd>
 
 <dt><a href="http://www.nginx.eu/">nginx</a></dt>
 <dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> run PSGI applications on a Perl interpreter embedded into nginx. This is considered highly experimental.</dd>
@@ -57,7 +63,7 @@ $( function() {
 
 <dl>
 <dt><a href="http://www.catalystframework.org/">Catalyst</a></dt>
-<dd>Catalyst is one of the most popular web application frameworks in Perl and has a support for PSGI through <a href="http://github.com/miyagawa/Catalyst-Engine-PSGI">Catalyst::Engine::PSGI</a>.</dd>
+<dd>Catalyst is one of the most popular web application frameworks in Perl and has a support for PSGI through <a href="http://search.cpan.org/dist/Catalyst-Engine-PSGI">Catalyst::Engine::PSGI</a>.</dd>
 <dt><a href="http://cgi-app.org/">CGI::Application</a></dt>
 <dd>Any CGI::Application can run as a PSGI application using <a href="http://github.com/miyagawa/CGI-PSGI">CGI::PSGI</a> and <a href="http://github.com/miyagawa/CGI-Application-PSGI">CGI::Application::PSGI</a>.</dd>
 <dt><a href="http://search.cpan.org/dist/HTTP-Engine">HTTP::Engine</a></dt>
@@ -90,13 +96,15 @@ $( function() {
 <h2>Middleware and Utilities</h2>
 
 <dl>
-<dt><a href="http://github.com/miyagawa/CGI-PSGI">CGI::PSGI</a></dt>
+<dt><a href="http://search.cpan.org/dist/CGI-PSGI">CGI::PSGI</a></dt>
 <dd>CGI.pm subclass to handle PSGI env hash to provide a CGI.pm-compatible interface. Very useful to migrate CGI.pm-based web application frameworks to the PSGI interface.</dd>
+<dt><a href="http://search.cpan.org/dist/Plack-Request">Plack::Request</a></dt>
+<dd>Plack::Request and Plack::Response is a simple wrapper around PSGI environment hash and response array to access those values using an Object oriented API.</dd>
 <dt><a href="http://search.cpan.org/~nuffin/IO-Handle-Util/">IO::Handle::Util</a></dt>
 <dd>Utility module to create an IO::Handle-like object instantly with a simple interface.</dd>
 <dt><a href="http://search.cpan.org/~kazuho/HTTP-Parser-XS-0.02/">HTTP::Parser::XS</a></dt>
 <dd>Super fast XS-based PSGI compatible HTTP header parser, used in many Plack server implementations.</dd>
-<dt><a href="http://github.com/miyagawa/Plack">CGI::Emulate::PSGI</a></dt>
+<dt><a href="http://github.com/tokuhirom/p5-cgi-emulate-psgi">CGI::Emulate::PSGI</a></dt>
 <dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating a CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI)</dd>
 
 </dl>
