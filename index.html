@@ -65,7 +65,10 @@ $( function() {
 <dd>ReverseHTTP server allows you to run a PSGI application on your desktop or inside the firewall but allows external access via <a href="http://www.reversehttp.net/">reversehttp.net</a> gateway.</dd>
 
 <dt><a href="http://github.com/spiritloose/mod_psgi/">mod_psgi</a></dt>
-<dd>mod_psgi is an Apache2 module by Jiro Nishiguchi that runs PSGI applications using an embedded Perl interpreter.</dd>
+<dd>mod_psgi is an Apache2 module that runs PSGI applications using an embedded Perl interpreter. Developed by Jiro Nishiguchi</dd>
+
+<dt><a href="http://github.com/sekimura/evpsgi">evpsgi</a></dt>
+<dd>evpsgi is an <a href="http://monkey.org/~provos/libevent/doxygen/evhttp_8h.html">evhttp</a> based web server that runs PSGI applications with the embedded Perl interpreter. Developed by Masayoshi Sekimura</dd>
 
 <dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
 <dd><a href="http://github.com/miyagawa/Perlbal-Plugin-PSGI">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because it is non-blocking and single process, your application is not supposed to block.</dd>
