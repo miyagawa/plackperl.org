@@ -71,7 +71,7 @@ $( function() {
 <dd>evpsgi is an <a href="http://monkey.org/~provos/libevent/doxygen/evhttp_8h.html">evhttp</a> based web server that runs PSGI applications with the embedded Perl interpreter. Developed by Masayoshi Sekimura</dd>
 
 <dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
-<dd><a href="http://github.com/miyagawa/Perlbal-Plugin-PSGI">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because Perlbal is running in a non-blocking event loop (Danga::Socket), your application is <strong>not supposed to block</strong>. If your application blocks, do not use this plugin and instead run your PSGI application with the prefork Plack server and reverse proxy to the backend as usual.</dd>
+<dd><a href="http://github.com/miyagawa/Perlbal-Plugin-PSGI">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because Perlbal runs in a non-blocking event loop (Danga::Socket), your application is also <strong>not supposed to block</strong>. If your application blocks (with database acesss or network I/O), do not use this plugin and instead run your PSGI application with the prefork Plack server and reverse proxy to the backend as usual.</dd>
 
 <dt><a href="http://www.nginx.eu/">nginx embedded perl</a></dt>
 <dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> allows you to run PSGI applications on a Perl interpreter embedded <strong>inside</strong> nginx. This patch is considered <strong>highly experimental and not recommended</strong> for the production use. You're recommended to run your (possibly blocking) PSGI application with prefork/fastcgi servers and put nginx in front, and in that case you don't need this patch.</dd>
@@ -139,9 +139,11 @@ $( function() {
 <dt><a href="http://www.slideshare.net/miyagawa/intro-to-psgi-and-plack">Intro to PSGI and Plack</a><dt>
 <dd>Tatsuhiko Miyagawa at Six Apart engineering</dd>
 <dt><a href="http://blog.patspam.com/2009/plebgui-webgui-meets-plack">PlebGUI: WebGUI meets Plack</a></dt>
-<dd>Patrick Donelan's introduction</a> to PSGI and Plack from the application developers point of view.</dd>
+<dd>Patrick Donelan writes a good introduction for PSGI and Plack from the web application developers point of view.</dd>
+<dt><a href="http://www.simon-cozens.org/content/i-finally-get-psgi-and-plack">I finally get PSGI and Plack!</a></dt>
+<dd>Simon Cozens writes a great post about what PSGI is, by comparing it with HTTP::Engine.</dd>
 <dt><a href="http://tokuhirom.github.com/talks/20090910-yapcasia2009-psgi-plack/">PSGI/Plack</a></dt>
-<dd>Tokuhiro Matsuno at YAPC::Asia 2009 (Japanese)</dd>
+<dd>Tokuhiro Matsuno and Tatsuhiko Miyagawa at YAPC::Asia 2009 (Japanese).</dd>
 </dl>
 
 <h2 id="community">Community</h2>
