@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta equiv="Cotent-Type" content="text/html;charset=utf-8"/>
-<title>PSGI/Plack - Perl WSGI</title>
+<title>PSGI/Plack - Perl Web Framework Superglue</title>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -13,6 +13,8 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
 <link rel="stylesheet" href="http://plackperl.org/screen.css"/>
 <style>
+h1 { margin-bottom: 0 }
+p.tagline { color: #888; padding-bottom: 2em }
 p.quote  { padding-bottom: 0 }
 p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1em }
 </style>
@@ -27,6 +29,7 @@ $( function() {
 <div class="container">
 
 <h1>PSGI/Plack</h1>
+<p class="tagline">Super glue interface for perl web application frameworks, just like Perl is the duct tape of the internet.</p>
 
 <p>PSGI is a <strong>specification</strong> of an interface between Perl web applications and web servers. PSGI is inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
 <p>Plack is a Perl module and namespace that contains a set of reference PSGI server <strong>implementations</strong>, middleware and utility modules.
@@ -103,7 +106,7 @@ $( function() {
 <dt><a href="http://maypole.perl.org/">Maypole</a></dt>
 <dd>Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
-<dd>Tatsumaki is a web application frmaework built on top of Plack and AnyEvent: natively supports non-blocking I/O loop, asynchronous HTTP clients, long-poll Comet services, server push and multipart XHR.</dd>
+<dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O loop, asynchronous HTTP clients, long-poll Comet services, server push and multipart XHR.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
 <dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
