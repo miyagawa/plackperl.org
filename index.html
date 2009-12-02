@@ -106,7 +106,7 @@ $( function() {
 <dt><a href="http://maypole.perl.org/">Maypole</a></dt>
 <dd>Maypole is a Struts-inspired MVC web application frameworks built on top of Class::DBI ORM. Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
-<dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O loop, asynchronous HTTP clients, long-poll Comet services, server push and multipart XHR.</dd>
+<dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O through psgi.streaming, non-blocking HTTP clients, long-poll Comet services and server push.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
 <dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
@@ -143,8 +143,10 @@ $( function() {
 <p class="inline">Note that some materials and technical details might be outdated.</p>
 
 <dl>
+<dt><a href="http://advent.plackperl.org/">Plack Advent Calendar</a></dt>
+<dd>24 days of Tips and tricks for PSGI and Plack</dd>
 <dt><a href="http://www.slideshare.net/miyagawa/intro-to-psgi-and-plack">Intro to PSGI and Plack</a><dt>
-<dd>Tatsuhiko Miyagawa at Six Apart engineering</dd>
+<dd>Tatsuhiko Miyagawa for Six Apart engineering internal meeting</dd>
 <dt><a href="http://blog.patspam.com/2009/plebgui-webgui-meets-plack">PlebGUI: WebGUI meets Plack</a></dt>
 <dd>Patrick Donelan writes a good introduction for PSGI and Plack from the web application developers point of view.</dd>
 <dt><a href="http://www.simon-cozens.org/content/i-finally-get-psgi-and-plack">I finally get PSGI and Plack!</a></dt>
