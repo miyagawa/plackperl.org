@@ -55,7 +55,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <h2 id="servers">Servers</h2>
 <dl>
 <dt><a href="http://search.cpan.org/dist/Plack">Plack</a></dt>
-<dd>The Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache2 mod_perl handler.</dd>
+<dd>The Plack core includes a standalone prefork HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache1 and 2 mod_perl handler.</dd>
 
 <dt>Misc Plack::Server backends</dt>
 <dd>Non-core server backends like <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a>, <a href="http://github.com/frodwith/plack-server-poe">POE</a> and <a href="http://github.com/miyagawa/Plack-Server-ServerSimple">ServerSimple</a> are available as separate distributions.</dd>
@@ -101,6 +101,8 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>Maypole is a Struts-inspired MVC web application frameworks built on top of Class::DBI ORM. Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
 <dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O through psgi.streaming, non-blocking HTTP clients, long-poll Comet services and server push.</dd>
+<dt><a href="http://mojolicious.org/">Mojo and Mojolicious</a></dt>
+<dd>Mojolicious is django and Sinatra inspired web framework and has zero dependencies to non-core Perl modules. It has a native PSGI adapter since 0.9025 on CPAN.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
 <dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
