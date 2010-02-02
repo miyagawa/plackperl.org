@@ -23,7 +23,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <div class="container">
 
 <h1>PSGI/Plack</h1>
-<p class="tagline">Superglue interface for perl web application frameworks, just like Perl is the duct tape of the internet.</p>
+<p class="tagline">Superglue interface between perl web application frameworks and web servers, just like Perl is the duct tape of the internet.</p>
 
 <p>PSGI is an <strong>interface</strong> between Perl web applications and web servers. PSGI is inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
 <p>Plack is a Perl module and <strong>toolkit</strong> that contains PSGI middleware, utility modules and adapters to PSGI servers.</p>
@@ -61,7 +61,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>There are other PSGI server implementations and Plack adapters for them, to run PSGI applications on <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a>, <a href="http://github.com/frodwith/plack-server-poe">POE</a> and <a href="http://github.com/miyagawa/Plack-Server-ServerSimple">HTTP::Server::Simple</a>. They are available as separate distributions.</dd>
 
 <dt><a href="http://github.com/miyagawa/Nomo">Nomo</a></dt>
-<dd>Nomo is a high-performance, superdaemon aware, preforking HTTP server that is compatible to PSGI. It has nice features such as hot-deploy, graceful restart, dynamic worker pool configuration and UNIX socket sharing.</dd>
+<dd>Nomo is a high-performance, superdaemon aware, preforking HTTP server that is compatible to PSGI. Using supervisors such as Server::Starter and ControlFreak, Nomo can benefit from features such as hot-deploy, graceful restart, dynamic worker pool configuration and UNIX socket sharing.</dd>
 
 <dt><a href="http://search.cpan.org/dist/Plack-Server-ReverseHTTP">ReverseHTTP</a></dt>
 <dd>ReverseHTTP server allows you to run a PSGI application on your desktop or inside the firewall but allows external access via <a href="http://www.reversehttp.net/">reversehttp.net</a> gateway.</dd>
@@ -70,7 +70,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>mod_psgi is an Apache2 module that runs PSGI applications using an embedded Perl interpreter. Developed by Jiro Nishiguchi</dd>
 
 <dt><a href="http://github.com/sekimura/evpsgi">evpsgi</a></dt>
-<dd>evpsgi is an <a href="http://monkey.org/~provos/libevent/doxygen/evhttp_8h.html">evhttp</a> based web server that runs PSGI applications with the embedded Perl interpreter. Developed by Masayoshi Sekimura</dd>
+<dd>evpsgi is an <a href="http://monkey.org/~provos/libevent/doxygen/evhttp_8h.html">evhttp</a> based http server that runs PSGI applications with the embedded Perl interpreter. Developed by Masayoshi Sekimura</dd>
 
 <dt><a href="http://www.danga.com/perlbal/">Perlbal</a></dt>
 <dd><a href="http://github.com/miyagawa/Perlbal-Plugin-PSGI">Perlbal::Plugin::PSGI</a> allows you to run PSGI applications on Perlbal. Note that because Perlbal runs in a non-blocking event loop (Danga::Socket), your application is also <strong>not supposed to block</strong>. If your application blocks (with database acesss or network I/O), do not use this plugin and instead run your PSGI application with the prefork Plack server and reverse proxy to the backend as usual.</dd>
@@ -105,7 +105,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
 <dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O through psgi.streaming and psgi.nonblocking, non-blocking HTTP clients, long-poll Comet services and server push.</dd>
 <dt><a href="http://mojolicious.org/">Mojo and Mojolicious</a></dt>
-<dd>Mojolicious is django and Sinatra inspired web framework and has zero dependencies to non-core Perl modules. It has a native PSGI adapter since 0.999915 on CPAN.</dd>
+<dd>Mojolicious is Merb and Sinatra inspired web framework and has zero dependencies to non-core Perl modules. It has a native PSGI adapter since 0.999915 on CPAN.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
 <dt><a href="http://github.com/spiritloose/Schenker">Schenker</a></dt>
