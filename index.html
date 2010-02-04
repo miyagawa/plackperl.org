@@ -58,7 +58,10 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>Plack core includes HTTP::Server::PSGI, the standalone (prefork) HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache1 and 2 mod_perl handler.</dd>
 
 <dt>Misc Plack::Server adapters</dt>
-<dd>There are other PSGI server implementations and Plack adapters for them, to run PSGI applications on <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a>, <a href="http://github.com/frodwith/plack-server-poe">POE</a> and <a href="http://github.com/miyagawa/Plack-Server-ServerSimple">HTTP::Server::Simple</a>. They are available as separate distributions.</dd>
+<dd>There are other PSGI server implementations and Plack adapters for them, to run PSGI applications on <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a> and <a href="http://github.com/frodwith/plack-server-poe">POE</a>. They are available as separate distributions.</dd>
+
+<dt><a href="http://search.cpan.org/dist/HTTP-Server-Simple-PSGI">HTTP::Server::Simple::PSGI</a></dt>
+<dd>HTTP::Server::Simple::PSGI is based on HTTP::Server::Simple and has zero dependency other than HTTP::Server::Simple, which itself doesn't have any dependencies. This is best for embedding to build a standalone web server or dependency free frameworks.</dd>
 
 <dt><a href="http://github.com/miyagawa/Nomo">Nomo</a></dt>
 <dd>Nomo is a high-performance, superdaemon aware, preforking HTTP server that is compatible to PSGI. Using supervisors such as Server::Starter and ControlFreak, Nomo can benefit from features such as hot-deploy, graceful restart, dynamic worker pool configuration and UNIX socket sharing.</dd>
@@ -104,7 +107,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>Maypole is a Struts-inspired MVC web application frameworks built on top of Class::DBI ORM. Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
 <dd>Tatsumaki is a web application framework built on top of Plack and AnyEvent: natively supports non-blocking I/O through psgi.streaming and psgi.nonblocking, non-blocking HTTP clients, long-poll Comet services and server push.</dd>
-<dt><a href="http://mojolicious.org/">Mojo and Mojolicious</a></dt>
+<dt><a href="http://mojolicious.org/">Mojolicious</a></dt>
 <dd>Mojolicious is Merb and Sinatra inspired web framework and has zero dependencies to non-core Perl modules. It has a native PSGI adapter since 0.999915 on CPAN.</dd>
 <!-- dt><a href="http://github.com/dann/angelos">Angelos</a></dt>
 <dt><a href="http://github.com/typester/ark-perl">Ark</a></dt>
