@@ -81,8 +81,8 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dt><a href="http://www.nginx.eu/">nginx embedded perl</a></dt>
 <dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> allows you to run PSGI applications on a Perl interpreter embedded <strong>inside</strong> nginx. This patch is considered <strong>highly experimental and not recommended</strong> for the production use. You're recommended to run your (possibly blocking) PSGI application with prefork/fastcgi servers and put nginx in front, and in that case you don't need this patch.</dd>
 
-<dt><a href="http://github.com/tokuhirom/p5-http-server-fast/">HTTP::Server::Fast</a></dt>
-<dd>HTTP::Server::Fast is a complete XS-based HTTP daemon to run PSGI applications, written by Tokuhiro Matsuno.</dd>
+<!-- dt><a href="http://github.com/tokuhirom/p5-http-server-fast/">HTTP::Server::Fast</a></dt>
+<dd>HTTP::Server::Fast is a complete XS-based HTTP daemon to run PSGI applications, written by Tokuhiro Matsuno.</dd -->
 
 </dl>
 
@@ -102,7 +102,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dt><a href="http://search.cpan.org/~beppu/Squatting/">Squatting</a></dt>
 <dd>Squatting is a Camping-inspired Web Microframework and has a support for PSGI through <a href="http://search.cpan.org/dist/Squatting-On-PSGI">Squatting::On::PSGI</a>.</dd>
 <dt><a href="http://search.cpan.org/~awwaiid/Continuity/">Continuity</a></dt>
-<dd>Continuity is a Coro based web server that supports Continuations. The <a href="http://github.com/awwaiid/Continuity/">Github repo</a> has an experimental Plack support.</dd>
+<dd>Continuity is a Coro based web application libary that supports Continuations to build statefull applications and support PSGI via Coro server since version 1.1.1 on CPAN.</dd>
 <dt><a href="http://maypole.perl.org/">Maypole</a></dt>
 <dd>Maypole is a Struts-inspired MVC web application frameworks built on top of Class::DBI ORM. Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
 <dt><a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a></dt>
