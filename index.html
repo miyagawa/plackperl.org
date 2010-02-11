@@ -54,14 +54,20 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 
 <h2 id="servers">Servers</h2>
 <dl>
-<dt><a href="http://search.cpan.org/dist/Plack">Plack</a> (adapters)</dt>
-<dd>Plack core includes HTTP::Server::PSGI, the standalone (prefork) HTTP server, a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and Apache1 and 2 mod_perl handler.</dd>
+<dt><a href="http://search.cpan.org/dist/Plack">Plack</a> (web server adapters)</dt>
+<dd>Plack core includes a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and mod_perl handlers for Apache1 and 2.</dd>
 
-<dt>Misc Plack::Server adapters</dt>
-<dd>There are other PSGI server implementations and Plack adapters for them, to run PSGI applications on <a href="http://github.com/miyagawa/Plack-Server-AnyEvent">AnyEvent</a>, <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a> and <a href="http://github.com/frodwith/plack-server-poe">POE</a>. They are available as separate distributions.</dd>
+<dt><a href="http://search.cpan.org/dist/Plack">HTTP::Server::PSGI</a></dt>
+<dd>HTTP::Server::PSGI is a reference PSGI standalone web server implementation and is included in the Plack core distribution.</dd>
 
 <dt><a href="http://search.cpan.org/dist/HTTP-Server-Simple-PSGI">HTTP::Server::Simple::PSGI</a></dt>
 <dd>HTTP::Server::Simple::PSGI is based on HTTP::Server::Simple and has zero dependency other than HTTP::Server::Simple, which itself doesn't have any dependencies. This is best for embedding to build a standalone web server or dependency free frameworks.</dd>
+
+<dt><a href="http://github.com/miyagawa/Twiggy">Twiggy</a></dt>
+<dd>Twiggy is an AnyEvent based non-blocking (asynchronous) and lightweight PSGI web server. Best to run AnyEvent based web applications to implement long-poll, server push or WebSockets etc., such as the one built on top of the <a href="http://github.com/miyagawa/Tatsumaki">Tatsumaki</a> framework.</dd>
+
+<dt>Misc. web server adapters</dt>
+<dd>There are many Perl web servers and adapters on CPAN and Plack handlers for them, to run PSGI applications on <a href="http://github.com/mala/Plack-Server-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Server-Coro">Coro</a>, <a href="http://github.com/miyagawa/Plack-Handler-AnyEvent-HTTPD">AnyEvent::HTTPD</a>, <a href="http://github.com/miyagawa/Plack-Handler-SCGI">SCGI</a>, <a href="http://github.com/miyagawa/Plack-Handler-AnyEvent-SCGI">AnyEvent::SCGI</a> and <a href="http://github.com/frodwith/plack-server-poe">POE</a>. They are available as separate distributions.</dd>
 
 <dt><a href="http://github.com/miyagawa/Starman">Starman</a></dt>
 <dd>Starman is a high-performance, preforking and PSGI compatible HTTP server that has unique features such as HTTP/1.1 support, multiple interfaces support including UNIX domain sockets, graceful restarts and dynamic worker pool configuration via signals.</dd>
