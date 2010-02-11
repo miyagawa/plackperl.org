@@ -64,7 +64,7 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dd>HTTP::Server::Simple::PSGI is based on HTTP::Server::Simple and has zero dependency other than HTTP::Server::Simple, which itself doesn't have any dependencies. This is best for embedding to build a standalone web server or dependency free frameworks.</dd>
 
 <dt><a href="http://github.com/miyagawa/Starman">Starman</a></dt>
-<dd>Starman is a high-performance, superdaemon aware, preforking HTTP server that is compatible to PSGI and supports most HTTP/1.1 features.</dd>
+<dd>Starman is a high-performance preforking, PSGI compatible HTTP server that has unique features such as HTTP/1.1 support, multiple interfaces support including UNIX domain sockets, graceful restarts and dynamic worker pool configuration via signals.</dd>
 
 <dt><a href="http://search.cpan.org/dist/Plack-Server-ReverseHTTP">ReverseHTTP</a></dt>
 <dd>ReverseHTTP server allows you to run a PSGI application on your desktop or inside the firewall but allows external access via <a href="http://www.reversehttp.net/">reversehttp.net</a> gateway.</dd>
