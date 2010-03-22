@@ -13,10 +13,11 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
 <link rel="stylesheet" href="http://plackperl.org/screen.css"/>
 <style>
-h1 { margin-bottom: 0 }
-p.tagline { color: #888; padding-bottom: 2em }
+h1 { font-size: 3em; margin-bottom: 0 }
+p.tagline { color: #888; padding-bottom: 2em; font-size: 0.9em }
 p.quote  { padding-bottom: 0 }
 p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1em }
+pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 </style>
 </head>
 <body>
@@ -25,10 +26,22 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <h1>PSGI/Plack</h1>
 <p class="tagline">Superglue interface between perl web application frameworks and web servers, just like Perl is the duct tape of the internet.</p>
 
-<p>PSGI is an <strong>interface</strong> between Perl web applications and web servers. PSGI is inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
-<p>Plack is a Perl module and <strong>toolkit</strong> that contains PSGI middleware, utility modules and adapters to PSGI servers.</p>
+<p>PSGI is an <strong>interface</strong> between Perl web applications and web servers, and Plack is a Perl module and <strong>toolkit</strong> that contains PSGI middleware, helpers and adapters to web servers.</p>
 
-<p class="inline">The <a href="http://search.cpan.org/perldoc?PSGI">PSGI specification</a> and <a href="http://search.cpan.org/perldoc?PSGI::FAQ">Frequently Asked Questions</a> are available.</p>
+<p>PSGI and Plack are inspired by Python's <a href="http://www.python.org/dev/peps/pep-0333/">WSGI</a> and Ruby's <a href="http://rack.rubyforge.org/">Rack</a>.</p>
+
+<h2 id="documentations">Documentations</h2>
+
+<ul>
+  <li><a href="http://search.cpan.org/perldoc?PSGI">PSGI specification</a></li>
+  <li><a href="http://search.cpan.org/perldoc?PSGI::FAQ">Frequently Asked Questions</a></li>
+  <li><a href="http://search.cpan.org/perldoc?Plack">Plack documentation</a></li>
+</ul>
+
+<h2 id="installation">Get Started</h2>
+
+<p class="inline">Install <a href="http://search.cpan.org/perldoc?App::cpanminus#INSTALL">cpanminus</a> and then run the following command to install Plack and uility modules.</p>
+<pre class="code">$ cpanm Task::Plack</pre>
 
 <h2 id="testimonials">What People Say</h2>
 
@@ -153,8 +166,8 @@ p.quoted { text-align: right; padding: 0; font-style: italic; padding-bottom: 1e
 <dl>
 <dt><a href="http://advent.plackperl.org/">Plack Advent Calendar</a></dt>
 <dd>24 days of Tips and tricks for PSGI and Plack</dd>
-<dt><a href="http://www.slideshare.net/miyagawa/plack-lpw-2009">PSGI and Plack</a><dt>
-<dd>Tatsuhiko Miyagawa at London Perl Workshop, December 2009</dd>
+<dt><a href="http://www.slideshare.net/miyagawa/plack-at-perl-oasis-2010">Plack: Superglue for Perl web frameworks and servers</a><dt>
+<dd>Tatsuhiko Miyagawa at Orlando Perl Workshop, January 2009</dd>
 <dt><a href="http://blog.patspam.com/2009/plebgui-webgui-meets-plack">PlebGUI: WebGUI meets Plack</a></dt>
 <dd>Patrick Donelan writes a good introduction for PSGI and Plack from the web application developers point of view.</dd>
 <dt><a href="http://www.simon-cozens.org/content/i-finally-get-psgi-and-plack">I finally get PSGI and Plack!</a></dt>
