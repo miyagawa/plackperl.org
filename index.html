@@ -37,14 +37,14 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <h2 id="documentation">Documentation</h2>
 
 <ul>
-  <li><a href="http://search.cpan.org/perldoc?PSGI">PSGI specification</a></li>
-  <li><a href="http://search.cpan.org/perldoc?PSGI::FAQ">Frequently Asked Questions</a></li>
-  <li><a href="http://search.cpan.org/perldoc?Plack">Plack documentation</a></li>
+  <li><a href="https://metacpan.org/pod/PSGI">PSGI specification</a></li>
+  <li><a href="https://metacpan.org/pod/PSGI::FAQ">Frequently Asked Questions</a></li>
+  <li><a href="https://metacpan.org/pod/Plack">Plack documentation</a></li>
 </ul>
 
 <h2 id="installation">Get Started</h2>
 
-<p class="inline">Install <a href="http://search.cpan.org/perldoc?App::cpanminus#INSTALL">cpanminus</a> and then run the following command to install Plack and utility modules.</p>
+<p class="inline">Install <a href="https://metacpan.org/pod/App::cpanminus#INSTALLATION">cpanminus</a> and then run the following command to install Plack and utility modules.</p>
 <pre class="code">$ cpanm Task::Plack</pre>
 
 <h2 id="testimonials">What People Say</h2>
@@ -71,13 +71,13 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 
 <h2 id="servers">Servers</h2>
 <dl>
-<dt><a href="http://search.cpan.org/dist/Plack">Plack</a> (web server adapters)</dt>
+<dt><a href="https://metacpan.org/pod/Plack">Plack</a> (web server adapters)</dt>
 <dd>Plack core includes a CGI runner (for running any PSGI application as a CGI script), a FastCGI daemon and mod_perl handlers for Apache1 and 2.</dd>
 
-<dt><a href="http://search.cpan.org/dist/Plack">HTTP::Server::PSGI</a></dt>
+<dt><a href="https://metacpan.org/pod/HTTP::Server::PSGI">HTTP::Server::PSGI</a></dt>
 <dd>HTTP::Server::PSGI is a reference PSGI standalone web server implementation and is included in the Plack core distribution.</dd>
 
-<dt><a href="http://search.cpan.org/dist/HTTP-Server-Simple-PSGI">HTTP::Server::Simple::PSGI</a></dt>
+<dt><a href="https://metacpan.org/pod/HTTP::Server::Simple::PSGI">HTTP::Server::Simple::PSGI</a></dt>
 <dd>HTTP::Server::Simple::PSGI is based on HTTP::Server::Simple and has zero dependency other than HTTP::Server::Simple, which itself doesn't have any dependencies. This is best for embedding to build a standalone web server or dependency free frameworks.</dd>
 
 <dt><a href="http://github.com/miyagawa/Starman">Starman</a></dt>
@@ -90,7 +90,7 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <dd>Corona is a Coro based PSGI web server that supports coroutines (cooperative threads) for each socket and clients. Best to use with AnyEvent or Coro friendly non-blocking web applications such as Continuity or Tatsumaki framework</dd>
 
 <dt><a href="http://github.com/stash/Feersum">Feersum</a></dt>
-<dd>Feersum is an HTTP server built on <a href="http://search.cpan.org/perldoc?EV">EV</a>/<a href="http://software.schmorp.de/pkg/libev.html">libev</a>. Feersum uses a single-threaded, event-based programming architecture to scale and can handle many concurrent connections efficiently in both CPU and RAM.</dd>
+<dd>Feersum is an HTTP server built on <a href="https://metacpan.org/pod/EV">EV</a>/<a href="http://software.schmorp.de/pkg/libev.html">libev</a>. Feersum uses a single-threaded, event-based programming architecture to scale and can handle many concurrent connections efficiently in both CPU and RAM.</dd>
 
 <dt><a href="http://github.com/kazuho/Starlet">Starlet</a></dt>
 <dd>Kazuho Oku's Starlet is based on the reference HTTP::Server::PSGI web server but adds a support for preforking, graceful restarts, shutdown and hot deploy via Server::Starter. This software was formerly called PSSPSS.</dd>
@@ -98,7 +98,7 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <dt>Misc. HTTP server adapters</dt>
 <dd>There are many Perl web servers and adapters on CPAN and Plack handlers for them, to run PSGI applications on <a href="http://github.com/miyagawa/Plack-Handler-FCGI-EV">FCGI::EV</a>, <a href="http://github.com/miyagawa/Plack-Handler-AnyEvent-FCGI">AnyEvent::FCGI</a>, <a href="http://github.com/typester/Plack-Server-Danga-Socket">Danga::Socket</a>, <a href="http://github.com/miyagawa/Plack-Handler-AnyEvent-HTTPD">AnyEvent::HTTPD</a>, <a href="http://github.com/miyagawa/Plack-Handler-SCGI">SCGI</a>, <a href="http://github.com/miyagawa/Plack-Handler-AnyEvent-SCGI">AnyEvent::SCGI</a> and <a href="http://github.com/frodwith/plack-server-poe">POE</a>. They are available as separate distributions.</dd>
 
-<dt><a href="http://search.cpan.org/dist/Plack-Server-ReverseHTTP">ReverseHTTP</a></dt>
+<dt><a href="https://metacpan.org/pod/Plack::Handler::AnyEvent::ReverseHTTP">ReverseHTTP</a></dt>
 <dd>ReverseHTTP server allows you to run a PSGI application on your desktop or inside the firewall but allows external access via <a href="http://www.reversehttp.net/">reversehttp.net</a> gateway.</dd>
 
 <dt><a href="http://projects.unbit.it/uwsgi/">uWSGI</a></dt>
@@ -125,20 +125,20 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 
 <dl>
 <dt><a href="http://www.catalystframework.org/">Catalyst</a></dt>
-<dd>Catalyst is one of the most popular web application frameworks in Perl and has native PSGI support as of version 5.9000. Support for older versions is available through <a href="http://search.cpan.org/dist/Catalyst-Engine-PSGI">Catalyst::Engine::PSGI</a>.</dd>
+<dd>Catalyst is one of the most popular web application frameworks in Perl and has native PSGI support as of version 5.9000. Support for older versions is available through <a href="https://metacpan.org/pod/Catalyst::Engine::PSGI">Catalyst::Engine::PSGI</a>.</dd>
 <dt><a href="http://jifty.org/">Jifty</a></dt>
 <dd>Jifty is a full-stack Perl web application framework that comes with continuations, form-based dispatch, ORM and A Pony. Jifty has replaced much of its internals with Plack modules.</dd>
 <dt><a href="http://cgi-app.org/">CGI::Application</a></dt>
-<dd>CGI::Application is a CGI.pm-based lightweight web framework. Any CGI::Application based applications can run as a PSGI application using <a href="http://search.cpan.org/dist/CGI-PSGI">CGI::PSGI</a> and <a href="http://search.cpan.org/dist/CGI-Application-PSGI">CGI::Application::PSGI</a>.</dd>
-<dt><a href="http://search.cpan.org/dist/HTTP-Engine">HTTP::Engine</a></dt>
+<dd>CGI::Application is a CGI.pm-based lightweight web framework. Any CGI::Application based applications can run as a PSGI application using <a href="https://metacpan.org/pod/CGI::PSGI">CGI::PSGI</a> and <a href="https://metacpan.org/pod/CGI::Application::PSGI">CGI::Application::PSGI</a>.</dd>
+<dt><a href="https://metacpan.org/pod/HTTP::Engine">HTTP::Engine</a></dt>
 <dd>HTTP::Engine is a micro web application framework and is a &quot;father of PSGI/Plack&quot; since we owe lots of code and ideas. HTTP::Engine itself now has PSGI Interface support as an adapter since 0.03 on CPAN.</dd>
 <dt><a href="http://dancer.sukria.net">Dancer</a></dt>
 <dd>Dancer is a Sinatra-like micro web application framework and has supported PSGI since version 0.9904.</dd>
 <dt><a href="http://www.masonhq.com/">Mason</a></dt>
-<dd>Mason allows you to embed code in HTML templates and can now run on any PSGI supported web server using <a href="http://search.cpan.org/dist/HTML-Mason-PSGIHandler/">HTML::Mason::PSGIHandler</a></dd>
-<dt><a href="http://search.cpan.org/~beppu/Squatting/">Squatting</a></dt>
-<dd>Squatting is a Camping-inspired Web Microframework and has a support for PSGI through <a href="http://search.cpan.org/dist/Squatting-On-PSGI">Squatting::On::PSGI</a>.</dd>
-<dt><a href="http://search.cpan.org/~awwaiid/Continuity/">Continuity</a></dt>
+<dd>Mason allows you to embed code in HTML templates and can now run on any PSGI supported web server using <a href="https://metacpan.org/pod/HTML::Mason::PSGIHandler/">HTML::Mason::PSGIHandler</a></dd>
+<dt><a href="https://metacpan.org/pod/Squatting">Squatting</a></dt>
+<dd>Squatting is a Camping-inspired Web Microframework and has a support for PSGI through <a href="https://metacpan.org/pod/Squatting::On::PSGI">Squatting::On::PSGI</a>.</dd>
+<dt><a href="https://metacpan.org/pod/Continuity">Continuity</a></dt>
 <dd>Continuity is a Coro based web application libary that supports Continuations to build statefull applications and support PSGI via Coro server since version 1.1.1 on CPAN.</dd>
 <dt><a href="http://maypole.perl.org/">Maypole</a></dt>
 <dd>Maypole is a Struts-inspired MVC web application frameworks built on top of Class::DBI ORM. Maypole applications can run as PSGI applications using <a href="http://github.com/miyagawa/Maypole-PSGI">Maypole::PSGI</a>.</dd>
@@ -147,7 +147,7 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <dt><a href="http://mojolicious.org/">Mojolicious</a></dt>
 <dd>Mojolicious is Merb and Sinatra inspired web framework and has zero dependencies to non-core Perl modules. It has a native PSGI adapter since 0.999920 on CPAN.</dd>
 <dt>Other frameworks</dt>
-<dd>There are lots of other individual frameworks that supports PSGI and Plack. Some of them are not available on CPAN but are developed on github: <a href="http://search.cpan.org/dist/Web-Simple">Web::Simple</a>, <a href="http://github.com/dann/angelos">Angelos</a>, <a href="http://github.com/typester/ark-perl">Ark</a>, <a href="http://github.com/spiritloose/Schenker">Schenker</a>, <a href="http://github.com/yusukebe/Noe">Noe</a>, <a href="http://github.com/nekokak/p5-Kamui">Kamui</a> and <a href="http://github.com/zby/WebNano">WebNano</a>.</dd>
+<dd>There are lots of other individual frameworks that supports PSGI and Plack. Some of them are not available on CPAN but are developed on github: <a href="https://metacpan.org/pod/Web::Simple">Web::Simple</a>, <a href="http://github.com/dann/angelos">Angelos</a>, <a href="http://github.com/typester/ark-perl">Ark</a>, <a href="http://github.com/spiritloose/Schenker">Schenker</a>, <a href="http://github.com/yusukebe/Noe">Noe</a>, <a href="http://github.com/nekokak/p5-Kamui">Kamui</a> and <a href="http://github.com/zby/WebNano">WebNano</a>.</dd>
 
 <h2 id="applications">Applications</h2>
 
@@ -159,16 +159,16 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <h2 id="middlewares">Middleware and Utilities</h2>
 
 <dl>
-<dt><a href="http://search.cpan.org/dist/CGI-PSGI">CGI::PSGI</a></dt>
+<dt><a href="https://metacpan.org/pod/CGI::PSGI">CGI::PSGI</a></dt>
 <dd>CGI.pm subclass to handle PSGI env hash to provide a CGI.pm-compatible interface. Very useful to migrate CGI.pm-based web application frameworks to the PSGI interface.</dd>
-<dt><a href="http://search.cpan.org/perldoc?Plack::Request">Plack::Request</a></dt>
+<dt><a href="https://metacpan.org/pod/Plack::Request">Plack::Request</a></dt>
 <dd>Plack::Request and Plack::Response is a simple wrapper around PSGI environment hash and response array to access those values using an Object oriented API.</dd>
-<dt><a href="http://search.cpan.org/~nuffin/IO-Handle-Util/">IO::Handle::Util</a></dt>
+<dt><a href="https://metacpan.org/pod/IO::Handle::Util">IO::Handle::Util</a></dt>
 <dd>Utility module to create an IO::Handle-like object instantly with a simple interface.</dd>
-<dt><a href="http://search.cpan.org/~kazuho/HTTP-Parser-XS-0.02/">HTTP::Parser::XS</a></dt>
+<dt><a href="https://metacpan.org/pod/HTTP::Parser::XS">HTTP::Parser::XS</a></dt>
 <dd>Super fast XS-based PSGI compatible HTTP header parser, used in many Plack server implementations.</dd>
-<dt><a href="http://search.cpan.org/dist/CGI-Emulate-PSGI">CGI::Emulate::PSGI</a></dt>
-<dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating a CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI). Also take a look at <a href="http://search.cpan.org/dist/CGI-Compile">CGI::Compile</a> which compiles an existing CGI scripts into a callable subroutine reference, best to be used with CGI::Emulate::PSGI.</dd>
+<dt><a href="https://metacpan.org/pod/CGI::Emulate::PSGI">CGI::Emulate::PSGI</a></dt>
+<dd>Run any CGI scripts (whether it uses CGI.pm or not) as a PSGI application by emulating a CGI environment. It does the opposite of CGI runner PSGI server impementation (Plack::Server::CGI). Also take a look at <a href="https://metacpan.org/pod/CGI::Compile">CGI::Compile</a> which compiles an existing CGI scripts into a callable subroutine reference, best to be used with CGI::Emulate::PSGI.</dd>
 
 </dl>
 
