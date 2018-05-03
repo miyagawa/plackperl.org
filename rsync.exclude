@@ -1,5 +1,0 @@
-rsync.exclude
-Makefile
-*~
-.git
-
