@@ -123,6 +123,9 @@ pre.code { background: #222; color: #ddd; font-size: 1.2em; padding: 1em }
 <dt><a href="http://www.nginx.eu/">nginx embedded perl</a></dt>
 <dd><a href="http://github.com/yappo/nginx-psgi-patchs">Kazuhiro Osawa's nginx patches</a> allows you to run PSGI applications on a Perl interpreter embedded <strong>inside</strong> nginx. This patch is considered <strong>highly experimental and not recommended</strong> for the production use. You're recommended to run your (possibly blocking) PSGI application with prefork/fastcgi servers and put nginx in front, and in that case you don't need this patch.</dd>
 
+<dt><a href="https://unit.nginx.org/">NGINX Unit</a></dt>
+<dd><a href="https://unit.nginx.org/">NGINX Unit</a> is is a dynamic web and application server, designed to run applications in multiple languages. Unit is lightweight, polyglot, and dynamically configured via API. The design of the server allows reconfiguration of specific application parameters as needed by the engineering or operations. Unit supports PSGI since version 0.5.</dd>
+
 <!-- dt><a href="http://github.com/tokuhirom/p5-http-server-fast/">HTTP::Server::Fast</a></dt>
 <dd>HTTP::Server::Fast is a complete XS-based HTTP daemon to run PSGI applications, written by Tokuhiro Matsuno.</dd -->
 
